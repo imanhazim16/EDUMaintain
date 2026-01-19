@@ -1,0 +1,273 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Sidebar Layout */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #fff;
+    color: #555;
+    transition: all 0.3s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 15px 25px;
+    font-size: 0.95em;
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+#sidebar ul li a:hover,
+#sidebar ul li a.active {
+    color: #007bff;
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+}
+
+#sidebar ul li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #2D0854 0%, #4A148C 100%);
+    color: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-section h5 {
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.hero-section h1 {
+    color: #f1c40f;
+    /* Yellowish Gold */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: #ddd;
+    max-width: 800px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Stats Widgets Cards */
+.widget-card {
+    border: none;
+    border-radius: 4px;
+    /* Slightly sharper edges like ref */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.widget-card:hover {
+    transform: translateY(-5px);
+}
+
+.widget-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.widget-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* Thin look */
+    margin-bottom: 20px;
+}
+
+.widget-desc {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Color Classes for Widgets - UiTM Purple Theme Premium (Updated) */
+.bg-widget-uitm-primary {
+    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+    box-shadow: 0 10px 25px rgba(74, 20, 140, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-widget-uitm-accent {
+    background: linear-gradient(135deg, #6A1B9A 0%, #AB47BC 100%);
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-widget-uitm-dark {
+    background: linear-gradient(135deg, #311B92 0%, #5E35B1 100%);
+    box-shadow: 0 10px 25px rgba(49, 27, 146, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dashboard Tables */
+.card-table {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+/* Other Utilities */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.text-gold {
+    color: #f1c40f;
+}
+
+/* Custom Status Badges */
+.badge-status-pending {
+    background: linear-gradient(135deg, #FF1744 0%, #D50000 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(213, 0, 0, 0.2);
+}
+
+.badge-status-progress {
+    background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%);
+    color: #212121;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 160, 0, 0.2);
+}
+
+.badge-status-completed {
+    background: linear-gradient(135deg, #00C853 0%, #009624 100%);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 150, 36, 0.2);
+}
+
+/* Text Status Boxes for Announcements */
+.status-box {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.text-status-pending {
+    background-color: #ffebee;
+    color: #D50000;
+    border: 1px solid #ffcdd2;
+}
+
+.text-status-progress {
+    background-color: #fff9c4;
+    color: #f57f17;
+    border: 1px solid #fff59d;
+}
+
+.text-status-completed {
+    background-color: #e8f5e9;
+    color: #009624;
+    border: 1px solid #c8e6c9;
+}
+
+.badge-status-generic {
+    background: linear-gradient(135deg, #757575 0%, #424242 100%);
+    color: white;
+    font-weight: 600;
+}
+
+/* Remove old navbar styles if conflicting */
+/* Remove old navbar styles if conflicting */
+
+.navbar-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    padding: 10px 20px;
+}
+
+/* Force Fixed Header */
+#content .navbar {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 250px;
+    /* Match sidebar width */
+    width: auto;
+    z-index: 1020;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Push content down so it doesn't disappear behind fixed header */
+#content {
+    padding-top: 80px;
+    /* Approx header height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #content .navbar {
+        left: 0 !important;
+    }
+}
